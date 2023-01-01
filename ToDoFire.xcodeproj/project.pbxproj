@@ -13,6 +13,7 @@
 		50D923B52961F5F7006CFDA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D923B32961F5F7006CFDA9 /* Main.storyboard */; };
 		50D923B72961F5F8006CFDA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D923B62961F5F8006CFDA9 /* Assets.xcassets */; };
 		50D923BA2961F5F8006CFDA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50D923B82961F5F8006CFDA9 /* LaunchScreen.storyboard */; };
+		50D923C22961FA96006CFDA9 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D923C12961FA96006CFDA9 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		50D923B62961F5F8006CFDA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50D923B92961F5F8006CFDA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50D923BB2961F5F8006CFDA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50D923C12961FA96006CFDA9 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				50D923AF2961F5F7006CFDA9 /* SceneDelegate.swift */,
 				50D923B12961F5F7006CFDA9 /* LoginViewController.swift */,
 				50D923B32961F5F7006CFDA9 /* Main.storyboard */,
+				50D923C12961FA96006CFDA9 /* TasksViewController.swift */,
 				50D923B62961F5F8006CFDA9 /* Assets.xcassets */,
 				50D923B82961F5F8006CFDA9 /* LaunchScreen.storyboard */,
 				50D923BB2961F5F8006CFDA9 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D923B22961F5F7006CFDA9 /* LoginViewController.swift in Sources */,
+				50D923C22961FA96006CFDA9 /* TasksViewController.swift in Sources */,
 				50D923AE2961F5F7006CFDA9 /* AppDelegate.swift in Sources */,
 				50D923B02961F5F7006CFDA9 /* SceneDelegate.swift in Sources */,
 			);
