@@ -9,11 +9,11 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    
+    let segueIdentifier = "tasksSegue"
 
     @IBOutlet weak var warnLabel: UILabel!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
@@ -23,6 +23,19 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
         warnLabel.alpha = 0
+        
+        Auth.auth().addStateDidChangeListener { [weak self] auth, user in
+            if user != nil {
+                self?.performSegue(withIdentifier: (self?.segueIdentifier)!, sender: nil)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
     
     @objc func kbDidShow(notification: NSNotification) {
@@ -79,12 +92,16 @@ class LoginViewController: UIViewController {
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             
             if error == nil {
                 if user != nil {
-                    self?.performSegue(withIdentifier: "tasksSegue", sender: nil)
+                    
+                } else {
+                    print("User is not created")
                 }
+            } else {
+                print(error?.localizedDescription ?? "")
             }
         }
         
