@@ -13,7 +13,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoFire" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -71,7 +71,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BM2-mx-qgx"/>
-                                                    <segue destination="oVX-an-1bO" kind="show" identifier="tasksSegue" id="bt3-Iq-YcP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecm-fP-4Up">
@@ -115,7 +114,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="LmU-hG-m4r" id="79g-mk-izP"/>
                         <outlet property="passwordTextField" destination="9id-qb-Gxd" id="oHm-0k-5yK"/>
-                        <outlet property="warn" destination="v1X-XF-n77" id="7QD-yk-Mwx"/>
+                        <outlet property="warnLabel" destination="v1X-XF-n77" id="7QD-yk-Mwx"/>
+                        <segue destination="oVX-an-1bO" kind="show" identifier="tasksSegue" id="nWf-3Z-j0t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
