@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5014A955296422C200BDAB8B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5014A954296422C200BDAB8B /* Task.swift */; };
+		5014A957296422CC00BDAB8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5014A956296422CC00BDAB8B /* User.swift */; };
 		50D923AE2961F5F7006CFDA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D923AD2961F5F7006CFDA9 /* AppDelegate.swift */; };
 		50D923B02961F5F7006CFDA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D923AF2961F5F7006CFDA9 /* SceneDelegate.swift */; };
 		50D923B22961F5F7006CFDA9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D923B12961F5F7006CFDA9 /* LoginViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5014A954296422C200BDAB8B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		5014A956296422CC00BDAB8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		50D923AA2961F5F7006CFDA9 /* ToDoFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D923AD2961F5F7006CFDA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D923AF2961F5F7006CFDA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5014A958296422DD00BDAB8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5014A954296422C200BDAB8B /* Task.swift */,
+				5014A956296422CC00BDAB8B /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		50D923A12961F5F7006CFDA9 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +77,7 @@
 		50D923AC2961F5F7006CFDA9 /* ToDoFire */ = {
 			isa = PBXGroup;
 			children = (
+				5014A958296422DD00BDAB8B /* Model */,
 				50D923AD2961F5F7006CFDA9 /* AppDelegate.swift */,
 				50D923AF2961F5F7006CFDA9 /* SceneDelegate.swift */,
 				50D923B12961F5F7006CFDA9 /* LoginViewController.swift */,
@@ -158,6 +172,8 @@
 			files = (
 				50D923B22961F5F7006CFDA9 /* LoginViewController.swift in Sources */,
 				50D923C22961FA96006CFDA9 /* TasksViewController.swift in Sources */,
+				5014A957296422CC00BDAB8B /* User.swift in Sources */,
+				5014A955296422C200BDAB8B /* Task.swift in Sources */,
 				50D923AE2961F5F7006CFDA9 /* AppDelegate.swift in Sources */,
 				50D923B02961F5F7006CFDA9 /* SceneDelegate.swift in Sources */,
 			);

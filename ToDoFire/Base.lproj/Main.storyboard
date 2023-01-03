@@ -166,7 +166,11 @@
                                 <action selector="signOutTapped:" destination="H9O-Xe-Lew" id="Bhl-Bp-NqI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LLm-tV-dri"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LLm-tV-dri">
+                            <connections>
+                                <action selector="addTapped:" destination="H9O-Xe-Lew" id="iWU-hb-0fl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iav-pG-jSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
