@@ -14,6 +14,8 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
     var ref: DatabaseReference!
     var tasks = Array<Task>()
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,8 +26,27 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
                 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        ref.observe(.value, with: { [weak self] snapshot in
+            var _tasks = Array<Task>()
+            for item in snapshot.children {
+                let task = Task(snapshot: item as! DataSnapshot)
+                _tasks.append(task)
+            }
+            self?.tasks = _tasks
+            self?.tableView.reloadData()
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        ref.removeAllObservers()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,8 +55,9 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.backgroundColor = .clear
         
         var content = cell.defaultContentConfiguration()
-        content.text = "This is cell number \(indexPath.row)"
         content.textProperties.color = .white
+        let taskTitle = tasks[indexPath.row].title
+        content.text = taskTitle
         cell.contentConfiguration = content
         
         return cell
