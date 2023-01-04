@@ -25,11 +25,11 @@ struct Task {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         title = snapshotValue["title"] as! String
         userId = snapshotValue["userId"] as! String
-        //completed = snapshotValue["completed"] as! Bool
+        completed = snapshotValue["completed"] as! Bool
         ref = snapshot.ref
     }
         
     func convertToDictionary() -> Any {
-        return ["title": title, "userId": userId, "comleted": completed]
+        return ["title": title, "userId": userId, "completed": completed]
     }
 }
